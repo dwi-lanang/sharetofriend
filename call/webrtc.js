@@ -12,7 +12,7 @@ var peerConnectionConfig = null;
     // ]
 // };
 
-var socket = io.connect('//103.43.45.223:1625');
+var socket = io.connect('http://103.43.45.223:1625');
 
 socket.on('remote', function(args){
 	if(!peerConnection) start(false);

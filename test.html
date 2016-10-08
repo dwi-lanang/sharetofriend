@@ -4,48 +4,43 @@
   <meta name="description" content="" />
   <meta name="author" content="dwilanang">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-  <meta itemprop="name" content="">
-  <meta itemprop="image" content="">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta id="theme-color" name="theme-color" content="#fff">
-  <title>stream</title>
-  <link rel="stylesheet" href="main.css" />
- 
-  <style>
-    video {
-      object-fit: cover;
-    }
-
-    @media screen and (min-width: 1000px) {
-      video {
-        height: 480px;
-      }
-    }
-  </style>
-<script src="http://192.168.1.115:3000/socket.io/socket.io.js"></script>
 </head>
-
 <body>
+	<script>
+		var xhr = new XMLHttpRequest();
+		xhr.open("GET", "https://www.tokopedia.com/savita-hijabers/jilbab-anak-syria-arumi-jilbab-syria-arumi", true);
+		xhr.onreadystatechange = function() {
+		  if (xhr.readyState == 4) {
+			// innerText does not let the attacker inject HTML elements.
+			//document.getElementById("resp").innerText = xhr.responseText;
+			console.log(xhr.responseText);
+		  }
+		}
+		xhr.send();
+		/*function createCORSRequest(method, url){
+			var xhr = new XMLHttpRequest();
+			if ("withCredentials" in xhr){
+				xhr.open(method, url, true);
+			} else if (typeof XDomainRequest != "undefined"){
+				xhr = new XDomainRequest();
+				xhr.open(method, url);
+			} else {
+				xhr = null;
+			}
+			return xhr;
+		}
 
-  <div id="container">
-
-    <h1><a href="../index.html" title="simpl.info home page">simpl.info</a> getUserMedia</h1>
-
-    <div id="highlight">
-      <p>New codelab: <a href="https://codelabs.developers.google.com/codelabs/webrtc-web">Realtime communication with WebRTC</a></p>
-    </div>
-
-    <video autoplay></video>
-
-    <p>The <code>MediaStream</code> object <code>stream</code> passed to the <code>getUserMedia()</code> callback in this demo is in global scope, so you can inspect it from the console.</p>
-
-    <p>For more information, see <a href="http://www.html5rocks.com/en/tutorials/getusermedia/intro/" title="Media capture article by Eric Bidelman on HTML5 Rocks">Capturing Audio &amp; Video in HTML5</a> on HTML5 Rocks.</p>
-
-    <a href="https://github.com/samdutton/simpl/blob/gh-pages/getusermedia/index.html" title="View source for this page on GitHub" id="viewSource">View source on GitHub</a>
-
-  </div>
-
-  <script src="main.js"></script>
-
+		var request = createCORSRequest("get", "https://www.tokopedia.com/savita-hijabers/jilbab-anak-syria-arumi-jilbab-syria-arumi");
+		if (request){
+			request.onload = function() {
+				console.log('aaa');
+			};
+			//request.onreadystatechange = handler;
+			request.send();
+		}*/
+		/*$(function(){
+			$('#iframeID').contents().find('#dink-it').html();
+		});*/
+	</script>
 </body>
 </html>

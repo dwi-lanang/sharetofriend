@@ -9,6 +9,7 @@
 	<iframe id="frameID" src="https://www.tokopedia.com/savita-hijabers/jilbab-anak-syria-arumi-jilbab-syria-arumi" width="100%" height="500"></iframe>
 	<script src="jquery.min.js"></script>
 	<script>
+		document.domain = 'tokopedia.com'
 		$(function(){
 			$('#frameID').load(function(){
 				$('#frameID').contents().find('body').html();

@@ -6,11 +6,13 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 </head>
 <body>
-	<iframe id="iframeID" src="https://www.tokopedia.com/savita-hijabers/jilbab-anak-syria-arumi-jilbab-syria-arumi" width="100%" height="500"></iframe>
+	<iframe id="frameID" src="https://www.tokopedia.com/savita-hijabers/jilbab-anak-syria-arumi-jilbab-syria-arumi" width="100%" height="500"></iframe>
 	<script src="jquery.min.js"></script>
 	<script>
 		$(function(){
-			console.log($('#iframeID').contents());
+			$('#frameID').load(function(){
+				$('#frameID').contents().find('body').html('Hey, i`ve changed content of <body>! Yay!!!');
+			});
 		});
 	</script>
 </body>
